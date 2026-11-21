@@ -39,15 +39,15 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <body>
 <main>
 <h1>Pesquisa de mercado: Rio Lisboa Auto Peças</h1>
-<p class="sub">Projeto de Extensão da UNISUAM. Leva uns 10 minutos. Não existe resposta certa: conte como a loja funciona hoje. Se não souber um número, estime ou deixe em branco.</p>
+<p class="sub">Projeto de Extensão da UNISUAM. Esta pesquisa busca entender melhor o funcionamento da loja e identificar oportunidades de melhoria. Leva cerca de 10 minutos. Não há respostas certas ou erradas: responda com base na realidade atual. Se não souber algum número, pode estimar ou deixar em branco. Evite informar dados pessoais de clientes ou informações confidenciais.</p>
 
 <form id="f" autocomplete="off">
 
 <section>
 <h2>1. Sobre a loja</h2>
-<p class="hint">Para confirmar o que já sabemos.</p>
+<p class="hint">Para conhecer melhor a operação e os canais de venda da loja.</p>
 <div class="q"><label class="t" for="resp">Seu nome e cargo</label><input type="text" id="resp" name="Responsável"></div>
-<div class="q"><p>Por quais canais a loja vende hoje?</p>
+<div class="q"><p>Por quais canais a loja realiza vendas atualmente?</p>
 <div class="opts" data-name="Canais de venda">
 <label><input type="checkbox" value="Balcão (loja física)">Balcão (loja física)</label>
 <label><input type="checkbox" value="WhatsApp">WhatsApp</label>
@@ -55,12 +55,12 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <label><input type="checkbox" value="Instagram / Facebook">Instagram / Facebook</label>
 <label><input type="checkbox" value="Site ou marketplace">Site ou marketplace</label>
 </div></div>
-<div class="q"><label class="t" for="canalmaior">Qual canal traz mais vendas?</label><input type="text" id="canalmaior" name="Canal que mais vende"></div>
+<div class="q"><label class="t" for="canalmaior">Na sua percepção, qual canal gera mais vendas?</label><input type="text" id="canalmaior" name="Canal que mais vende"></div>
 </section>
 
 <section>
 <h2>2. Clientes</h2>
-<div class="q"><p>Quem mais compra na loja? Marque até três.</p>
+<div class="q"><p>Quais são os principais tipos de clientes da loja? Marque até três opções.</p>
 <div class="opts" data-name="Principais clientes">
 <label><input type="checkbox" value="Mecânicos e oficinas">Mecânicos e oficinas</label>
 <label><input type="checkbox" value="Pessoas físicas">Pessoas físicas</label>
@@ -68,14 +68,14 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <label><input type="checkbox" value="Frotistas / empresas">Frotistas / empresas</label>
 <label><input type="checkbox" value="Outros">Outros</label>
 </div></div>
-<div class="q"><label class="t" for="moradia">De onde vem a maior parte dos clientes?</label>
+<div class="q"><label class="t" for="moradia">De quais regiões vem a maior parte dos clientes?</label>
 <select id="moradia" name="Origem dos clientes"><option value="">Escolha</option><option>Penha Circular e vizinhança</option><option>Zona Norte em geral</option><option>Outras regiões do Rio</option><option>Baixada ou outras cidades</option></select></div>
-<div class="q"><label class="t" for="porque">Por que o cliente escolhe a Rio Lisboa e não outra loja?</label><textarea id="porque" name="Por que escolhem a loja"></textarea></div>
+<div class="q"><label class="t" for="porque">Na sua opinião, quais são os principais motivos para o cliente escolher a Rio Lisboa?</label><textarea id="porque" name="Por que escolhem a loja"></textarea></div>
 </section>
 
 <section>
 <h2>3. Clientes novos</h2>
-<div class="q"><p>Como a loja se divulga hoje?</p>
+<div class="q"><p>Quais formas de divulgação a loja utiliza atualmente?</p>
 <div class="opts" data-name="Divulgação atual">
 <label><input type="checkbox" value="Indicação boca a boca">Indicação boca a boca</label>
 <label><input type="checkbox" value="Redes sociais">Redes sociais</label>
@@ -84,15 +84,15 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <label><input type="checkbox" value="Anúncios pagos">Anúncios pagos</label>
 <label><input type="checkbox" value="Não divulga">Não divulga</label>
 </div></div>
-<div class="q"><label class="t" for="novos">Em um mês comum, quantos clientes novos chegam? (aproximado)</label><input type="text" id="novos" name="Clientes novos por mês"></div>
-<div class="q"><label class="t" for="barreira">O que você acredita que impede a loja de atrair mais gente?</label><textarea id="barreira" name="Barreiras para atrair clientes"></textarea></div>
+<div class="q"><label class="t" for="novos">Em um mês comum, aproximadamente quantos clientes novos chegam à loja?</label><input type="text" id="novos" name="Clientes novos por mês"></div>
+<div class="q"><label class="t" for="barreira">Na sua opinião, o que poderia dificultar a atração de novos clientes?</label><textarea id="barreira" name="Barreiras para atrair clientes"></textarea></div>
 </section>
 
 <section>
 <h2>4. Dificuldades encontradas</h2>
-<p class="hint">Conte o que mais atrapalha o dia a dia da loja.</p>
-<div class="q"><label class="t" for="dif">Quais são as maiores dificuldades da loja hoje?</label><textarea id="dif" name="Maiores dificuldades"></textarea></div>
-<div class="q"><p>Em quais áreas a loja sente mais dificuldade?</p>
+<p class="hint">Considere a rotina atual da loja ao responder às perguntas desta seção.</p>
+<div class="q"><label class="t" for="dif">Quais são as principais dificuldades enfrentadas pela loja atualmente?</label><textarea id="dif" name="Maiores dificuldades"></textarea></div>
+<div class="q"><p>Em quais áreas essas dificuldades aparecem com mais frequência?</p>
 <div class="opts" data-name="Áreas com mais dificuldade">
 <label><input type="checkbox" value="Atrair clientes novos">Atrair clientes novos</label>
 <label><input type="checkbox" value="Fazer o cliente voltar">Fazer o cliente voltar</label>
@@ -102,8 +102,8 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <label><input type="checkbox" value="Equipe e organização">Equipe e organização</label>
 <label><input type="checkbox" value="Outras">Outras (escreva acima)</label>
 </div></div>
-<div class="q"><label class="t" for="difvenda">Como essas dificuldades afetam as vendas?</label><textarea id="difvenda" name="Efeito das dificuldades nas vendas"></textarea></div>
-<div class="q"><label class="t" for="tentou">O que a loja já tentou para resolver essas dificuldades? Funcionou?</label><textarea id="tentou" name="O que já tentou e resultado"></textarea></div>
+<div class="q"><label class="t" for="difvenda">De que forma essas dificuldades podem afetar as vendas ou o atendimento?</label><textarea id="difvenda" name="Efeito das dificuldades nas vendas"></textarea></div>
+<div class="q"><label class="t" for="tentou">Quais medidas a loja já adotou para lidar com essas dificuldades? Quais foram os resultados?</label><textarea id="tentou" name="O que já tentou e resultado"></textarea></div>
 </section>
 
 <section>
@@ -122,20 +122,20 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <label><input type="checkbox" value="Prazo ou crédito para mecânicos">Prazo ou crédito para mecânicos</label>
 <label><input type="checkbox" value="Nada específico">Nada específico</label>
 </div></div>
-<div class="q"><label class="t" for="retorno">De cada 10 clientes, quantos você diria que voltam a comprar?</label><input type="text" id="retorno" name="Clientes que voltam (de 10)"></div>
+<div class="q"><label class="t" for="retorno">A cada 10 clientes, aproximadamente quantos costumam voltar a comprar?</label><input type="text" id="retorno" name="Clientes que voltam (de 10)"></div>
 </section>
 
 <section>
 <h2>6. Concorrência</h2>
-<div class="q"><label class="t" for="conc">Quais lojas a Rio Lisboa considera concorrentes?</label><input type="text" id="conc" name="Concorrentes" value="Altese, Aciooly, Tigrão Auto Peças"></div>
-<div class="q"><label class="t" for="melhor">Em que a Rio Lisboa é melhor que elas?</label><textarea id="melhor" name="Pontos fortes frente à concorrência"></textarea></div>
-<div class="q"><label class="t" for="pior">Em que elas são melhores que a Rio Lisboa?</label><textarea id="pior" name="Pontos fracos frente à concorrência"></textarea></div>
+<div class="q"><label class="t" for="conc">Quais lojas a Rio Lisboa considera concorrentes?</label><input type="text" id="conc" name="Concorrentes" placeholder="Se possível, cite algumas lojas"></div>
+<div class="q"><label class="t" for="melhor">Quais são os pontos fortes da Rio Lisboa em relação a essas lojas?</label><textarea id="melhor" name="Pontos fortes frente à concorrência"></textarea></div>
+<div class="q"><label class="t" for="pior">Em quais aspectos essas lojas podem se destacar em relação à Rio Lisboa?</label><textarea id="pior" name="Pontos fracos frente à concorrência"></textarea></div>
 </section>
 
 <section>
 <h2>7. Para fechar</h2>
-<div class="q"><label class="t" for="quer">O que você mais gostaria de descobrir com esta pesquisa?</label><textarea id="quer" name="O que quer descobrir"></textarea></div>
-<div class="q"><label class="t" for="extra">Algo mais que devemos saber?</label><textarea id="extra" name="Observações"></textarea></div>
+<div class="q"><label class="t" for="quer">Que informação ou aspecto do negócio você considera mais importante compreender com esta pesquisa?</label><textarea id="quer" name="O que quer descobrir"></textarea></div>
+<div class="q"><label class="t" for="extra">Gostaria de acrescentar alguma informação que considere relevante para o trabalho?</label><textarea id="extra" name="Observações"></textarea></div>
 <div class="actions"><button type="submit">Gerar respostas</button></div>
 </section>
 </form>
@@ -152,13 +152,13 @@ button.alt,.btn.alt{background:transparent;color:var(--accent)}
 <p class="msg" id="msg"></p>
 </section>
 
-<p class="foot">As respostas ficam só no seu aparelho até você copiar ou enviar. Elas serão usadas apenas neste trabalho acadêmico.</p>
+<p class="foot">As respostas ficam neste aparelho até serem copiadas ou enviadas. Serão utilizadas para fins acadêmicos neste Projeto de Extensão. Não inclua dados pessoais de clientes nem informações confidenciais da empresa.</p>
 </main>
 <script>
 (function(){
 var f=document.getElementById('f'),out=document.getElementById('out'),txt=document.getElementById('txt'),msg=document.getElementById('msg');
 function build(){
-  var lines=['PESQUISA DE MERCADO – RIO LISBOA AUTO PEÇAS','Projeto de Extensão UNISUAM',''];
+  var lines=['PESQUISA DE MERCADO – RIO LISBOA AUTO PEÇAS','Projeto de Extensão UNISUAM','Objetivo: compreender aspectos do funcionamento, relacionamento com clientes e oportunidades de melhoria.',''];
   var secs=f.querySelectorAll('section');
   secs.forEach(function(s){
     var h=s.querySelector('h2').textContent,block=[];
@@ -178,7 +178,14 @@ function build(){
   });
   return lines.join('\n');
 }
-f.addEventListener('submit',function(e){
+
+document.querySelectorAll('[data-name="Principais clientes"] input[type="checkbox"]').forEach(function(box){
+  box.addEventListener('change',function(){
+    var checked=document.querySelectorAll('[data-name="Principais clientes"] input[type="checkbox"]:checked');
+    if(checked.length>3){box.checked=false;alert('Marque no máximo três opções.');}
+  });
+});
+\nf.addEventListener('submit',function(e){
   e.preventDefault();
   var t=build();txt.value=t;
   document.getElementById('wa').href='https://wa.me/?text='+encodeURIComponent(t);
