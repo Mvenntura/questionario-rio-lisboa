@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Questionário – Rio Lisboa Auto Peças</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500&display=swap">
+<style>
+:root{--bg:#f1f3f4;--card:#fff;--ink:#17212b;--muted:#5b6672;--line:#d5dade;--accent:#b8321a;--accent-ink:#fff;--field:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171c;--card:#1b232b;--ink:#eef1f3;--muted:#a3adb7;--line:#33404b;--accent:#e2573c;--accent-ink:#12171c;--field:#12171c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12171c;--card:#1b232b;--ink:#eef1f3;--muted:#a3adb7;--line:#33404b;--accent:#e2573c;--accent-ink:#12171c;--field:#12171c;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 Barlow,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+h1,h2{font-family:"Barlow Semi Condensed",Barlow,system-ui,sans-serif;margin:0}
+h1{font-size:30px;line-height:1.15;font-weight:700}
+.sub{color:var(--muted);margin:8px 0 0}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 16px;margin-top:16px}
+h2{font-size:21px;font-weight:600;margin-bottom:2px}
+.hint{color:var(--muted);font-size:14px;margin:0 0 12px}
+.q{margin-top:16px}
+label.t,.q>p{display:block;font-weight:500;margin:0 0 6px}
+input[type=text],textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+textarea{min-height:84px;resize:vertical}
+input:focus-visible,textarea:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.opts{display:flex;flex-direction:column;gap:6px}
+.opts label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.opts input{margin-top:4px;accent-color:var(--accent)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+button,.btn{font:600 16px "Barlow Semi Condensed",Barlow,sans-serif;border-radius:8px;padding:12px 18px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;display:inline-block}
+button.alt,.btn.alt{background:transparent;color:var(--accent)}
+#out{display:none}
+#out textarea{min-height:240px;font-size:14px}
+.msg{color:var(--muted);font-size:14px;margin-top:8px;min-height:20px}
+.foot{color:var(--muted);font-size:13px;margin-top:20px}
+</style>
+</head>
+<body>
+<main>
+<h1>Pesquisa de mercado: Rio Lisboa Auto Peças</h1>
+<p class="sub">Projeto de Extensão da UNISUAM. Leva uns 10 minutos. Não existe resposta certa: conte como a loja funciona hoje. Se não souber um número, estime ou deixe em branco.</p>
+
+<form id="f" autocomplete="off">
+
+<section>
+<h2>1. Sobre a loja</h2>
+<p class="hint">Para confirmar o que já sabemos.</p>
+<div class="q"><label class="t" for="resp">Seu nome e cargo</label><input type="text" id="resp" name="Responsável"></div>
+<div class="q"><p>Por quais canais a loja vende hoje?</p>
+<div class="opts" data-name="Canais de venda">
+<label><input type="checkbox" value="Balcão (loja física)">Balcão (loja física)</label>
+<label><input type="checkbox" value="WhatsApp">WhatsApp</label>
+<label><input type="checkbox" value="Telefone / call-center">Telefone / call-center</label>
+<label><input type="checkbox" value="Instagram / Facebook">Instagram / Facebook</label>
+<label><input type="checkbox" value="Site ou marketplace">Site ou marketplace</label>
+</div></div>
+<div class="q"><label class="t" for="canalmaior">Qual canal traz mais vendas?</label><input type="text" id="canalmaior" name="Canal que mais vende"></div>
+</section>
+
+<section>
+<h2>2. Clientes</h2>
+<div class="q"><p>Quem mais compra na loja? Marque até três.</p>
+<div class="opts" data-name="Principais clientes">
+<label><input type="checkbox" value="Mecânicos e oficinas">Mecânicos e oficinas</label>
+<label><input type="checkbox" value="Pessoas físicas">Pessoas físicas</label>
+<label><input type="checkbox" value="Motoristas de aplicativo">Motoristas de aplicativo</label>
+<label><input type="checkbox" value="Frotistas / empresas">Frotistas / empresas</label>
+<label><input type="checkbox" value="Outros">Outros</label>
+</div></div>
+<div class="q"><label class="t" for="moradia">De onde vem a maior parte dos clientes?</label>
+<select id="moradia" name="Origem dos clientes"><option value="">Escolha</option><option>Penha Circular e vizinhança</option><option>Zona Norte em geral</option><option>Outras regiões do Rio</option><option>Baixada ou outras cidades</option></select></div>
+<div class="q"><label class="t" for="porque">Por que o cliente escolhe a Rio Lisboa e não outra loja?</label><textarea id="porque" name="Por que escolhem a loja"></textarea></div>
+</section>
+
+<section>
+<h2>3. Clientes novos</h2>
+<div class="q"><p>Como a loja se divulga hoje?</p>
+<div class="opts" data-name="Divulgação atual">
+<label><input type="checkbox" value="Indicação boca a boca">Indicação boca a boca</label>
+<label><input type="checkbox" value="Redes sociais">Redes sociais</label>
+<label><input type="checkbox" value="Google / Google Meu Negócio">Google / Google Meu Negócio</label>
+<label><input type="checkbox" value="Panfleto, faixa ou carro de som">Panfleto, faixa ou carro de som</label>
+<label><input type="checkbox" value="Anúncios pagos">Anúncios pagos</label>
+<label><input type="checkbox" value="Não divulga">Não divulga</label>
+</div></div>
+<div class="q"><label class="t" for="novos">Em um mês comum, quantos clientes novos chegam? (aproximado)</label><input type="text" id="novos" name="Clientes novos por mês"></div>
+<div class="q"><label class="t" for="barreira">O que você acredita que impede a loja de atrair mais gente?</label><textarea id="barreira" name="Barreiras para atrair clientes"></textarea></div>
+</section>
+
+<section>
+<h2>4. Dificuldades encontradas</h2>
+<p class="hint">Conte o que mais atrapalha o dia a dia da loja.</p>
+<div class="q"><label class="t" for="dif">Quais são as maiores dificuldades da loja hoje?</label><textarea id="dif" name="Maiores dificuldades"></textarea></div>
+<div class="q"><p>Em quais áreas a loja sente mais dificuldade?</p>
+<div class="opts" data-name="Áreas com mais dificuldade">
+<label><input type="checkbox" value="Atrair clientes novos">Atrair clientes novos</label>
+<label><input type="checkbox" value="Fazer o cliente voltar">Fazer o cliente voltar</label>
+<label><input type="checkbox" value="Atendimento (balcão, WhatsApp, telefone)">Atendimento (balcão, WhatsApp, telefone)</label>
+<label><input type="checkbox" value="Preço frente à concorrência">Preço frente à concorrência</label>
+<label><input type="checkbox" value="Divulgação">Divulgação</label>
+<label><input type="checkbox" value="Equipe e organização">Equipe e organização</label>
+<label><input type="checkbox" value="Outras">Outras (escreva acima)</label>
+</div></div>
+<div class="q"><label class="t" for="difvenda">Como essas dificuldades afetam as vendas?</label><textarea id="difvenda" name="Efeito das dificuldades nas vendas"></textarea></div>
+<div class="q"><label class="t" for="tentou">O que a loja já tentou para resolver essas dificuldades? Funcionou?</label><textarea id="tentou" name="O que já tentou e resultado"></textarea></div>
+</section>
+
+<section>
+<h2>5. Fidelização</h2>
+<div class="q"><p>A loja mantém cadastro dos clientes (nome e telefone)?</p>
+<div class="opts" data-name="Cadastro de clientes">
+<label><input type="radio" name="cad" value="Sim, de quase todos">Sim, de quase todos</label>
+<label><input type="radio" name="cad" value="Só de alguns">Só de alguns</label>
+<label><input type="radio" name="cad" value="Não">Não</label>
+</div></div>
+<div class="q"><p>O que a loja faz para o cliente voltar?</p>
+<div class="opts" data-name="Ações de fidelização">
+<label><input type="checkbox" value="Desconto para clientes frequentes">Desconto para clientes frequentes</label>
+<label><input type="checkbox" value="Mensagem de pós-venda no WhatsApp">Mensagem de pós-venda no WhatsApp</label>
+<label><input type="checkbox" value="Aviso de promoções">Aviso de promoções</label>
+<label><input type="checkbox" value="Prazo ou crédito para mecânicos">Prazo ou crédito para mecânicos</label>
+<label><input type="checkbox" value="Nada específico">Nada específico</label>
+</div></div>
+<div class="q"><label class="t" for="retorno">De cada 10 clientes, quantos você diria que voltam a comprar?</label><input type="text" id="retorno" name="Clientes que voltam (de 10)"></div>
+</section>
+
+<section>
+<h2>6. Concorrência</h2>
+<div class="q"><label class="t" for="conc">Quais lojas a Rio Lisboa considera concorrentes?</label><input type="text" id="conc" name="Concorrentes" value="Altese, Aciooly, Tigrão Auto Peças"></div>
+<div class="q"><label class="t" for="melhor">Em que a Rio Lisboa é melhor que elas?</label><textarea id="melhor" name="Pontos fortes frente à concorrência"></textarea></div>
+<div class="q"><label class="t" for="pior">Em que elas são melhores que a Rio Lisboa?</label><textarea id="pior" name="Pontos fracos frente à concorrência"></textarea></div>
+</section>
+
+<section>
+<h2>7. Para fechar</h2>
+<div class="q"><label class="t" for="quer">O que você mais gostaria de descobrir com esta pesquisa?</label><textarea id="quer" name="O que quer descobrir"></textarea></div>
+<div class="q"><label class="t" for="extra">Algo mais que devemos saber?</label><textarea id="extra" name="Observações"></textarea></div>
+<div class="actions"><button type="submit">Gerar respostas</button></div>
+</section>
+</form>
+
+<section id="out" aria-live="polite">
+<h2>Pronto. Agora envie as respostas</h2>
+<p class="hint">Copie o texto abaixo e mande para quem aplicou a pesquisa, ou use o botão do WhatsApp.</p>
+<textarea id="txt" readonly></textarea>
+<div class="actions">
+<button type="button" id="copy">Copiar respostas</button>
+<a class="btn alt" id="wa" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+<button type="button" class="alt" id="back">Voltar e editar</button>
+</div>
+<p class="msg" id="msg"></p>
+</section>
+
+<p class="foot">As respostas ficam só no seu aparelho até você copiar ou enviar. Elas serão usadas apenas neste trabalho acadêmico.</p>
+</main>
+<script>
+(function(){
+var f=document.getElementById('f'),out=document.getElementById('out'),txt=document.getElementById('txt'),msg=document.getElementById('msg');
+function build(){
+  var lines=['PESQUISA DE MERCADO – RIO LISBOA AUTO PEÇAS','Projeto de Extensão UNISUAM',''];
+  var secs=f.querySelectorAll('section');
+  secs.forEach(function(s){
+    var h=s.querySelector('h2').textContent,block=[];
+    s.querySelectorAll('.q').forEach(function(q){
+      var opts=q.querySelector('.opts');
+      var label=(q.querySelector('label.t')||q.querySelector('p')).textContent.trim();
+      var val='';
+      if(opts){
+        var v=[];opts.querySelectorAll('input:checked').forEach(function(i){v.push(i.value)});
+        val=v.join('; ');
+      }else{
+        var el=q.querySelector('input,textarea,select');val=el?el.value.trim():'';
+      }
+      block.push(label+'\n   '+(val||'(sem resposta)'));
+    });
+    lines.push(h.toUpperCase());lines.push(block.join('\n'));lines.push('');
+  });
+  return lines.join('\n');
+}
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var t=build();txt.value=t;
+  document.getElementById('wa').href='https://wa.me/?text='+encodeURIComponent(t);
+  out.style.display='block';msg.textContent='';
+  out.scrollIntoView({behavior:'smooth',block:'start'});
+});
+document.getElementById('copy').addEventListener('click',function(){
+  var done=function(){msg.textContent='Respostas copiadas. Cole na conversa com quem aplicou a pesquisa.'};
+  var fail=function(){txt.select();msg.textContent='Selecione o texto acima e copie manualmente.'};
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt.value).then(done,function(){try{txt.select();document.execCommand('copy')?done():fail()}catch(x){fail()}})}
+    else{txt.select();document.execCommand('copy')?done():fail()}
+  }catch(x){fail()}
+});
+document.getElementById('back').addEventListener('click',function(){out.style.display='none';f.scrollIntoView({behavior:'smooth'})});
+})();
+</script>
+</body>
+</html>
