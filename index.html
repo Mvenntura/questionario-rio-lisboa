@@ -185,7 +185,8 @@ document.querySelectorAll('[data-name="Principais clientes"] input[type="checkbo
     if(checked.length>3){box.checked=false;alert('Marque no máximo três opções.');}
   });
 });
-\nf.addEventListener('submit',function(e){
+
+f.addEventListener('submit',function(e){
   e.preventDefault();
   var t=build();txt.value=t;
   document.getElementById('wa').href='https://wa.me/?text='+encodeURIComponent(t);
